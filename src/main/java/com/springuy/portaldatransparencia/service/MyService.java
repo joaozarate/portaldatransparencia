@@ -2,9 +2,9 @@ package com.springuy.portaldatransparencia.service;
 
 public class MyService {
 
-    private IConnectionService connection;
+    private ConnectionService connection;
 
-    public MyService(IConnectionService connection) {
+    public MyService(ConnectionService connection) {
         this.connection = connection;
     }
 
