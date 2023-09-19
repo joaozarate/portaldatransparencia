@@ -1,10 +1,10 @@
-package com.springuy.portaldatransparencia.service;
+package com.springuy.portaldatransparencia.framework;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;
 import java.net.URL;
 
-public class PortalDaTransparenciaConnectionService implements ConnectionService {
+class PortalDaTransparenciaConnectionService implements ConnectionService {
 
     @Override
     public HttpsURLConnection connect(String urlParameter) {

@@ -1,8 +1,8 @@
-package com.springuy.portaldatransparencia.service;
+package com.springuy.portaldatransparencia.framework;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public interface ConnectionService {
+interface ConnectionService {
 
     HttpsURLConnection connect(String urlParameter);
 

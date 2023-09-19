@@ -1,24 +1,20 @@
-package com.springuy;
+package com.springuy.portaldatransparencia.framework;
 
-import com.springuy.portaldatransparencia.service.ConnectionService;
-import com.springuy.portaldatransparencia.service.Consumer;
 import lombok.Cleanup;
+import lombok.RequiredArgsConstructor;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class PortalDaTransparenciaConsumer implements Consumer {
+@RequiredArgsConstructor
+class PortalDaTransparenciaConsumer implements Consumer {
 
-    private ConnectionService connectionService;
-
-    public PortalDaTransparenciaConsumer(ConnectionService connectionService) {
-        this.connectionService = connectionService;
-    }
+    private final ConnectionService connectionService;
 
     @Override
-    public void retrieveData(String urlParameter) {
+    public String retrieveData(String urlParameter) {
         @Cleanup(value = "disconnect")
         HttpsURLConnection connector = connectionService.connect(urlParameter);
 
@@ -33,6 +29,7 @@ public class PortalDaTransparenciaConsumer implements Consumer {
             throw new RuntimeException(e);
         }
 
-        System.out.println(response);
+        return response.toString();
     }
+
 }

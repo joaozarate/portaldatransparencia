@@ -1,6 +1,4 @@
-package com.springuy.portaldatransparencia.service;
-
-import com.springuy.PortalDaTransparenciaConsumer;
+package com.springuy.portaldatransparencia.framework;
 
 public class PortalDaTransparenciaConnectionServiceInjector implements ConnectionServiceInjector {
 

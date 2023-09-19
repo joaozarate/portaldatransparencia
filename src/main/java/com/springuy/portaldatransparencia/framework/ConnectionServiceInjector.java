@@ -1,4 +1,4 @@
-package com.springuy.portaldatransparencia.service;
+package com.springuy.portaldatransparencia.framework;
 
 public interface ConnectionServiceInjector {
 
