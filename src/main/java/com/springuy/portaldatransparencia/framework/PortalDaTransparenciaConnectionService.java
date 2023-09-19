@@ -1,9 +1,13 @@
 package com.springuy.portaldatransparencia.framework;
 
+import lombok.extern.java.Log;
+
 import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;
 import java.net.URL;
+import java.util.logging.Level;
 
+@Log
 class PortalDaTransparenciaConnectionService implements ConnectionService {
 
     @Override
@@ -19,6 +23,7 @@ class PortalDaTransparenciaConnectionService implements ConnectionService {
             connector.setRequestProperty("chave-api-dados", "");//TODO: set in a parameterizable way.
             return connector;
         } catch (IOException e) {
+            log.log(Level.SEVERE, "Error connecting to " + urlParameter, e);
             throw new RuntimeException(e);
         }
 
