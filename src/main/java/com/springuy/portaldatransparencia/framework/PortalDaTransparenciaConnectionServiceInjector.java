@@ -1,10 +1,10 @@
-package com.springuy.portaldatransparencia.service;
+package com.springuy.portaldatransparencia.framework;
 
 public class PortalDaTransparenciaConnectionServiceInjector implements ConnectionServiceInjector {
 
     @Override
     public Consumer getConsumer() {
-        return null;
+        return new PortalDaTransparenciaConsumer(new PortalDaTransparenciaConnectionService());
     }
 
 }
