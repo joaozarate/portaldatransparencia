@@ -20,7 +20,7 @@ class PortalDaTransparenciaConnectionService implements ConnectionService {
             connector.setConnectTimeout(500);//TODO: set in a parameterizable way.
             connector.setRequestProperty("Content-Type", "application/json");
             connector.setRequestProperty("User-Agent", "api-jar");//TODO: set in a parameterizable way.
-            connector.setRequestProperty("chave-api-dados", "");//TODO: set in a parameterizable way.
+            connector.setRequestProperty("chave-api-dados", "bf5e95d4a4fa19ee18a19e198d87c9ae");//TODO: set in a parameterizable way.
             return connector;
         } catch (IOException e) {
             log.log(Level.SEVERE, "Error connecting to " + urlParameter, e);
