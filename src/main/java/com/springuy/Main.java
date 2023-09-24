@@ -5,6 +5,7 @@ import com.springuy.portaldatransparencia.domain.AuxilioBrasilSacado;
 import com.springuy.portaldatransparencia.framework.ConnectionServiceInjector;
 import com.springuy.portaldatransparencia.framework.Consumer;
 import com.springuy.portaldatransparencia.framework.PortalDaTransparenciaConnectionServiceInjector;
+import com.springuy.portaldatransparencia.service.benefits.AuxilioService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,11 @@ public class Main {
         }.getType());
 
         System.out.println(data);
+
+        AuxilioService supportService = new AuxilioService();
+        List<AuxilioBrasilSacado> response  = supportService.callAuxilioBrasilSacadoApi("3144805", "202301", "1");
+
+        System.out.println(response);
 
     }
 
